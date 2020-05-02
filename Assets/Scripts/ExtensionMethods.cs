@@ -40,4 +40,20 @@ public static class ExtensionMethods
     {
         return _findInChildren(trans, name);
     }
+
+    public static Vector3 Multiply(this Vector3 vec, float x, float y, float z)
+    {
+        return new Vector3(vec.x * x, vec.y * y, vec.z * z);
+    }
+
+    public static Vector3 Multiply(this Vector3 vec, Vector3 other)
+    {
+        return Multiply(vec, other.x, other.y, other.z);
+    }
+
+    public static float Remap(this float f, float fromMin, float fromMax, float toMin, float toMax)
+    {
+        float t = (f - fromMin) / (fromMax - fromMin);
+        return Mathf.LerpUnclamped(toMin, toMax, t);
+    }
 }

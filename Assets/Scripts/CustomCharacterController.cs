@@ -31,8 +31,12 @@ public class CustomCharacterController : MonoBehaviour
     public float maxPitchAngle = 75.0f;
     public float minRotationSpeed = 600.0f; // The turn speed when the player is at max speed (in degrees/second)
     public float maxRotationSpeed = 1200.0f; // The turn speed when the player is stationary (in degrees/second)
-    public bool IsGrounded { get; private set; }
+
     public CharacterController unityCharacterController; // The Unity's CharacterController
+    public Vector3 Velocity => unityCharacterController.velocity;
+    public Vector3 HorizontalVelocity => unityCharacterController.velocity.WithY(0.0f);
+    public Vector3 VerticalVelocity => unityCharacterController.velocity.Multiply(0.0f, 1.0f, 0.0f);
+    public bool IsGrounded { get; private set; }
 
     private float _targetHorizontalSpeed; // In meters/second
     private float _horizontalSpeed; // In meters/second

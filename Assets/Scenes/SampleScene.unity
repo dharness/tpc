@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2138677392}
-  m_IndirectSpecularColor: {r: 0.2850269, g: 0.3713935, b: 0.49601045, a: 1}
+  m_IndirectSpecularColor: {r: 0.28502673, g: 0.37139347, b: 0.49600998, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1493,6 +1493,12 @@ MeshFilter:
 --- !u!1 &461650814 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 8ef387b572e7b7e4593212d6e2fb9726,
+    type: 3}
+  m_PrefabInstance: {fileID: 894524167}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &461650815 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: -6057140222963153312, guid: 8ef387b572e7b7e4593212d6e2fb9726,
     type: 3}
   m_PrefabInstance: {fileID: 894524167}
   m_PrefabAsset: {fileID: 0}
@@ -5717,6 +5723,7 @@ GameObject:
   - component: {fileID: 1951875490}
   - component: {fileID: 1951875495}
   - component: {fileID: 1951875491}
+  - component: {fileID: 1951875492}
   m_Layer: 0
   m_Name: Noodle
   m_TagString: Untagged
@@ -5768,6 +5775,19 @@ MonoBehaviour:
   playerInput: {fileID: 1951875495}
   meshes:
   - {fileID: 461650814}
+--- !u!114 &1951875492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1951875489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85c4d4b2e4ee24a0e9b18f6ea40c0f0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 461650815}
 --- !u!4 &1951875493
 Transform:
   m_ObjectHideFlags: 0

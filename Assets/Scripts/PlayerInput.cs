@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem.Users;
 using System;
 
 public class PlayerInput : MonoBehaviour
@@ -21,6 +22,7 @@ public class PlayerInput : MonoBehaviour
     {
         playerControls = new PlayerControls();
         playerControls.Gameplay.ChangeClothes.performed += ctx => this.HandleChangeClothesButtonPressed();
+        // playerControls.Gameplay.MovementWASD
     }
 
     public void HandleChangeClothesButtonPressed()
@@ -55,6 +57,8 @@ public class PlayerInput : MonoBehaviour
 
         // Update other inputs
         CameraInput = playerControls.Gameplay.CameraRotation.ReadValue<Vector2>();
+        // Debug.Log("GamepadScheme" + playerControls.currentControlScheme);
+        // Debug.Log("KeyboardScheme" + playerControls.KeyboardScheme);
         JumpInput = playerControls.Gameplay.Jump.ReadValue<float>() > 0f;
     }
 

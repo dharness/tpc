@@ -5,10 +5,12 @@ using UnityEngine;
 public class Character : MonoBehaviour
 {
     public CustomCharacterController characterController;
+    CharacterAnimator _characterAnimator;
 
     void Start()
     {
-        
+        Cursor.lockState = CursorLockMode.Locked;
+        _characterAnimator = GetComponent<CharacterAnimator>();
     }
 
     void Update()
@@ -18,8 +20,7 @@ public class Character : MonoBehaviour
 
     void FixedUpdate()
     {
+        _characterAnimator.UpdateState();
         characterController.OnCharacterFixedUpdate();
     }
-
-    
 }
